@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ayescgitsta.github.io/main-app-leyu-com-cn/sitemap.xml
