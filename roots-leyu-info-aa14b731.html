@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资料索引 · leyu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #faf7f2;
+            font-family: "Noto Serif SC", "Source Han Serif SC", Georgia, "Times New Roman", serif;
+            color: #2d2a24;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            border-bottom: 1px solid #e1d9cd;
+            padding-bottom: 1.8rem;
+            margin-bottom: 2.8rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            color: #3c362e;
+            margin-bottom: 0.6rem;
+        }
+
+        .page-header .sub {
+            font-size: 1rem;
+            color: #7a6f61;
+            font-style: italic;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem 2.2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 680px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 1.8rem;
+            }
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 6px;
+            padding: 1.6rem 1.8rem;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+            border: 1px solid #ebe4d9;
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid #dfd4c4;
+            display: inline-block;
+        }
+
+        .card p,
+        .card li {
+            font-size: 0.95rem;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card ul li {
+            padding: 0.25rem 0 0.25rem 1.4rem;
+            position: relative;
+        }
+
+        .card ul li::before {
+            content: "·";
+            position: absolute;
+            left: 0.2rem;
+            color: #b3a187;
+            font-weight: 700;
+        }
+
+        .notice-box {
+            background: #f5f0ea;
+            border-left: 4px solid #cbbaa7;
+            padding: 1.4rem 1.8rem;
+            margin: 2.2rem 0 2.6rem 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.95rem;
+        }
+
+        .notice-box strong {
+            color: #4d4237;
+        }
+
+        .faq-preview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .faq-item {
+            flex: 1 1 200px;
+            background: #fffcf7;
+            padding: 0.8rem 1.2rem;
+            border-radius: 4px;
+            border: 1px solid #e8dfd2;
+        }
+
+        .faq-item .q {
+            font-weight: 500;
+            color: #3c362e;
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-item .a {
+            font-size: 0.9rem;
+            color: #665d50;
+        }
+
+        .ref-links {
+            margin-top: 2.8rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e1d9cd;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0.8rem 1.2rem;
+        }
+
+        .ref-links span.label {
+            font-size: 0.85rem;
+            color: #8c806f;
+            letter-spacing: 0.02em;
+        }
+
+        .ref-links a {
+            color: #3f3a32;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #cfc1ae;
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+
+        .ref-links a:hover {
+            color: #1f1b16;
+            text-decoration-color: #a6917b;
+        }
+
+        .hero-note {
+            margin-bottom: 2.2rem;
+            font-size: 1.05rem;
+            background: #fcf9f5;
+            padding: 1.4rem 2rem;
+            border-radius: 8px;
+            border: 1px solid #e5dbcd;
+        }
+
+        .hero-note p {
+            max-width: 780px;
+        }
+
+        .section-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #8f826f;
+            margin-bottom: 0.4rem;
+        }
+
+        .fine-print {
+            font-size: 0.85rem;
+            color: #7d7262;
+            margin-top: 2rem;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-header">
+        <h1>leyu · 知识库入口</h1>
+        <div class="sub">资料整理 · 信息索引 · 结构化记录</div>
+    </div>
+
+    <div class="hero-note">
+        <div class="section-label">→ 索引说明</div>
+        <p>
+            本页面向需要系统检索 <a href="https://roots-leyu.com">leyu</a> 相关资料的读者，
+            提供一组经过归类的信息节点。内容从原始材料中提取、校检、分类，适合需要快速定位主题或建立知识框架的场景。
+            以下卡片分别对应资料库、使用提示、常见疑问摘要及扩展参考，可作为独立板块使用。
+        </p>
+    </div>
+
+    <div class="info-grid">
+        <div class="card">
+            <h2>资料归档</h2>
+            <ul>
+                <li>数据手册 · 版本变更记录</li>
+                <li>接口说明与参数对照表</li>
+                <li>操作流程示意图（PDF / PNG）</li>
+                <li>术语汇编 · 中英对照</li>
+                <li>历史修订摘要与勘误</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>实用提示</h2>
+            <ul>
+                <li>建议先查阅“快速开始”章节</li>
+                <li>使用搜索时优先匹配标准关键词</li>
+                <li>配置文件存放路径见附录A</li>
+                <li>日志级别可在管理面板调整</li>
+                <li>定期同步本地副本至归档库</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="notice-box">
+        <strong>⏺ 引用提示</strong>
+        · 本页面所有索引均指向公开可查的信息源。
+        若需引用具体数据或原文，请标注引用日期与版本号。
+        资料整理截止于最近一次同步，后续更新请以 <a href="https://roots-leyu.com">leyu</a> 主站内容为准。
+    </div>
+
+    <div class="faq-preview">
+        <div class="faq-item">
+            <div class="q">Q: 文档是否有离线版本？</div>
+            <div class="a">目前提供 PDF 打包下载，每月更新一次。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">Q: 如何提交内容修正？</div>
+            <div class="a">可通过站内工单或邮件提交，通常 2 个工作日内反馈。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">Q: 索引分类依据是什么？</div>
+            <div class="a">按照功能模块与使用频率排列，兼顾新手与进阶用户。</div>
+        </div>
+    </div>
+
+    <div class="ref-links">
+        <span class="label">相关信息</span>
+        <a href="https://roots-leyu.com">leyu</a>
+        <span style="color:#b3a68f;">·</span>
+        <a href="#">使用手册索引</a>
+        <span style="color:#b3a68f;">·</span>
+        <a href="#">更新日志</a>
+        <span style="color:#b3a68f;">·</span>
+        <a href="#">常见问题归档</a>
+    </div>
+
+    <div class="fine-print">
+        资料整理日期：2025-02 · 版本标识 6.9b · 本页为静态索引页，内容仅作参考。
+    </div>
+
+</body>
+</html>
